@@ -3,58 +3,102 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
- 
 
-	<h:head>
-		<title>Sign in form</title>
-                <style type="text/css">
-                    body{
-                        background-color: limegreen;
-                        font-size: medium;
-                        font-family: arial;
-                        color: blue;
-                       text-align: center
+
+    <h:head>
+        <title>Sign in form</title>
+        <style>
+            .body{
+              width: 100%;
+              height: 99vh;
+            background-image:url("image/0x00.jpg");
+            background-size: cover;
+             background position: center;
+            }
+            .content{
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                text-align: center;
+                color: black;
+            }
+            .content h1{
+                font-size: 50px;
+                margin-top: 60px;
+            }
+            .content p{
+                margin: 20px auto;
+                font-weight: 100%;
+                line-height: 25px;
+                font-size: 1.1rem;
+                color: red;
+            }
+            .navbar{
+            width: 85%;
+            margin: auto;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            } 
+            
+               .apply {
+		
+		width: 200px;
+                padding: 15px 0;
+                text-align: center;
+                margin: 20px;
+                border-radius: 25px;
+                font-weight: bold;
+                border:2px solid #009688;
+                background: black;
+                color: white;
+                cursor: pointer;
+              
+                   
                     }
-                    
-                </style>
-                 
+                    .cross {
+		
+		width: 200px;
+                padding: 15px 0;
+                text-align: center;
+                align-items: bottom;
+                margin: 20px;
+                border-radius: 25px;
+                font-weight: bold;
+                border:2px solid #009688;
+                background: black;
+                align-items: flex-end;
+                color: white;
+                cursor: pointer;
+                    }  
+                
+
+        </style>
+        
+         
 	</h:head>
 	
 	<h:body>
-          
-             <h3 style="color:green; text-align: center">Please sign in to be directed to the registration site</h3>
-               <div>
-		<h:form id="Login-form">
-                   
-                    <h:panelGrid columns="2">
-                    
-                       <h:outputLabel for="email">Email:
-                                  </h:outputLabel>
-                    <h:inputText id="email" value= "#{link.email}" required="true" size="30" 
-                                 disabled= "#{link.email}" validator= "#{link.validateEmail}">
-                    </h:inputText>
-                   
-                    <h:message for="email">     
-                    </h:message>
-                    <br></br>
-                    
-                   <h:outputLabel for="password">Password:
-                                  </h:outputLabel>
-                    <h:inputSecret id="password" value="#{link.password}" required="true" size="30"
-                                 disabled="#{link.password}" validator="#{link.validatePassword}">
-                    </h:inputSecret>
-                   
-                    <h:message for="password"></h:message>
-                    <br></br>
+            <div class="body">
+                <div class="navbar">
+          <h:form >
+               <div class="content">
+                                                    
+                  <h1>Welcome and experience the culture and business </h1>
+                  <p>please sign in if have an account</p>
+                  <p>If you don`t have ,please create one </p>
+              </div>
+                  <br></br>
+                  <div class="commandbutton">                
+                  <h:commandButton value="Sign in" action="Welcome" styleClass="apply"></h:commandButton>
                   
-                    
-                        <h:commandButton value="Sign in" action="HomePage"></h:commandButton> 
-                              <h:commandButton value="create" action="create"></h:commandButton> 
-                    
-                      </h:panelGrid>
-                      
-		</h:form>
-             </div>
+                       <h:commandButton value="create" action="createaccount" styleClass="cross"></h:commandButton>
+                  </div>               
+          </h:form>
+                </div>
+        </div>
 	</h:body>
 
 </html>
