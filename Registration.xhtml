@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>from the company registration option in the Homepage</title>
+        
+             <style type="text/css">
+                    *{
+                        padding: 0;
+                        margin: 0;
+                        box-sizing: border-box;
+                        font-family: 'Poppins', sans-serif;
+                    }   
+                    
+                
+                       body{
+                        height: 300vh;
+                        width:100%;
+                        background-image:url("image/images_4.jpg");
+                        background-size: cover;
+                        background-position: center;
+                        display: flex;
+                        align-items: center;
+                        display: inline-block;
+                        justify-content: space-between;
+                        padding:0 5%; 
+                    }
+                    .container{
+                        width: 600%;
+                        max-width: 900px;
+                        padding: 30px 20px;
+                        background: black;
+                        border: 7px solid brown;
+                        border-radius: 20px;
+                        color: white;
+                        list-style-type:none;
+                        display: inline-block;
+                        justify-content: space-between;
+                        margin: 0 20px;
+                       position: relative;
+                    }
+                    .container h3{
+                        text-align: center;
+                        color: green;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        padding: 0,0,8px,0;
+                    }
+                    
+                  
+                   
+                    container form {
+                     padding: 0 40px;
+                     display: inline-block;
+                     justify-content: space-between;
+                     
+                    }
+                    form .main{
+                     position: relative;
+                     margin: 10px 0;
+                     border-bottom: 2px solid ;
+                    }
+                    .main input{
+                     width: 50%;
+                     padding: 0 5px;
+                     display: inline-block;
+                     justify-content: space-between;
+                     height: 40px;
+                     border: 3px solid skyblue;
+                     outline: double;
+                     color: green;
+                    }
+                    .main output label{
+                        position: absolute;
+                        top: 50px;
+                        left: 6px;
+                        color: white;
+                        transform: translateY(-50%);
+                        font-size: 1.1rem;
+                        pointer-events: none;
+                        transition: all 20s ease;
+                    }
+                   
+                    
+                   
+                          .button {
+		border-width:2px;
+		border-color: green;
+		border-style: solid;
+		text-align: center;
+		font-weight: bold;
+                font-size: 1.1rem;
+		background: black;
+		color: white;
+                height: 45px;
+		width: 50%;
+                border-radius: 16px;
+                cursor: pointer;
+                    }
+                    
+                              .back {
+		border-width:2px;
+		border-color: green;
+		border-style: solid;
+		text-align: center;
+		font-weight: bold;
+                font-size: 1.1rem;
+		background: black;
+		color: white;
+                height: 45px;
+		width: 50%;
+                border-radius: 16px;
+                cursor: pointer;
+                    }
+      
+        </style>
+                    
+    </h:head>
+    <h:body>
+         <div class="container">
+             
+              <h3>Welcome please register your company</h3>
+		<h:form id = "form">
+                    
+                       
+                        <div class="main">   
+                    <h:outputText value="Company Name: " />
+                    <h:inputText id = "companyname" value = "#{registerre.companyname}" required="true"></h:inputText>
+                    <h:message for="companyname"></h:message>
+                        </div>
+                    <br></br> <br></br>
+                    
+                    
+                    <div class="main"> 
+                    <h:outputLabel value="PERSONAL INFORMATION:"></h:outputLabel>
+                    <br></br> <br></br>
+                    <h:outputLabel value="Company Owner*"/>
+                    </div>
+                    
+                    <br></br>
+                     <div class="main"> 
+                     <h:outputText value="First Name: " />
+                    <h:inputText id="firstname" value="#{registerre.firstname}"  required="true"></h:inputText>
+                    <h:message for="firstname"></h:message>  <br/>  <h:outputText value="Last Name: " />
+                    <h:inputText id="lastname" value="#{registerre.lastname}"  required="true"></h:inputText>
+                    <h:message for="Lastname"></h:message>
+                     </div>
+                    <br></br> <br></br>
+                    
+                     <div class="main"> 
+                    <h:outputText value="Phone Number: " />
+                    <h:inputText id="phonenumber" value="#{registerre.phonenumber}"  required="true"></h:inputText>
+                    <h:message for="phonenumber"></h:message>
+                 
+                     <h:outputText value="Email: " />
+                    <h:inputText id="email" value="#{registerre.email}"  required="true"></h:inputText>
+                    <h:message for="email"></h:message>
+                     </div>
+                    <br></br> <br></br>
+                  
+                     <div class="main"> 
+                      <h:outputText value="Number of employees: " />
+                    <h:inputText id="numbeerofempoyess" value="#{registerre.numberofemployees}"  required="true"></h:inputText>
+                    <h:message for="numberofemployees"></h:message>
+                     </div>
+                          <br></br> <br></br>
+                        
+                    <div class="main"> 
+                      <h:outputText value="Nationality: " />
+                    <h:inputText id="nationality" value="#{registerre.nationality}"  required="true"></h:inputText>
+                     <h:message for="nationality"></h:message>
+                    
+                        <h:outputLabel value="Region*"/>
+                    <br></br> <br></br>
+                    
+                     <h:selectOneMenu value ="#{registerre.region}"  required="true">
+                        <f:selectItem itemValue ="Amhara"/>
+                         <f:selectItem itemValue ="Oromia"/>
+                          <f:selectItem itemValue ="Afar"/>
+                           <f:selectItem itemValue ="Gambella"/>
+                            <f:selectItem itemValue ="Southern Nations"/>
+                            </h:selectOneMenu>
+                     </div>
+                    <br></br> <br></br>
+                    
+                     <div class="main"> 
+                   <h:outputText value="Address: " />
+                    <h:inputText id="address" value="#{registerre.address}"  required="true"></h:inputText>
+                    <h:message for="address"></h:message>
+                     
+                      <h:outputText value="City: " />
+                    <h:inputText id="city" value="#{registerre.city}"  required="true"></h:inputText>
+                    <h:message for="city"></h:message>
+                     </div>
+                    <br></br> <br></br>
+                  
+                     <div class="main"> 
+                    <h:outputLabel value="Company Structure*"/>
+                    <br></br> <br></br>
+                    
+                    <h:selectOneMenu value ="#{registerre.companystructure}" required="true">
+                        <f:selectItem itemValue ="Companies Limited by Shares"/>
+                         <f:selectItem itemValue ="Companies Limited by Guarantee."/>
+                          <f:selectItem itemValue ="Unlimited Companies"/>
+                           <f:selectItem itemValue ="One Person Companies (OPC)"/>
+                            <f:selectItem itemValue ="Private Companies"/>
+                             <f:selectItem itemValue ="Public Companies"/>
+                              <f:selectItem itemValue ="Holding and Subsidiary Companies"/>
+                               <f:selectItem itemValue ="Associate Companies"/>
+                             </h:selectOneMenu>
+                     </div>
+                    <br></br> <br></br>
+                         
+                     <div class="main"> 
+                    <h:outputLabel value="Company Description*:"/>
+                    <br></br> <br></br>
+                    <h:inputTextarea id="companydescription" value="#{registerre.companydescription}" cols="30" rows="10"  required="true"
+                                     ></h:inputTextarea>
+                    <h:message for="companydescription"></h:message>
+                       </div>
+                     <br></br>
+                     
+                   <h:commandButton value="Submit" action="#{registerre.save()}" styleClass= "button"></h:commandButton>
+                   <h:commandButton value="Back" action="HomePage" immediate="true" styleClass= "back"></h:commandButton>
+                                                                                   
+		</h:form>
+             
+             </div>
+            
+	</h:body>
+
+</html>
+                        		
+  
