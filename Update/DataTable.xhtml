@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+         td{
+                margin: 20px;
+                
+                padding: 20px;
+                background-color: bisque;
+            }
+             
+            th{
+                background-color: goldenrod;
+                margin: 20px;
+                
+                padding: 20px;
+            } 
+            
+                        .bu {
+		border-width:3px;
+		border-color: green;
+		border-style: solid;
+		text-align: center;
+		font-weight: bold;
+                font-size: 1.1rem;
+		background: black;
+		color: white;
+                height: 45px;
+		width: 25%;
+                border-radius: 16px;
+                cursor: pointer;
+                    }    
+                        .b {
+		border-width:3px;
+		border-color: green;
+		border-style: solid;
+		text-align: center;
+		font-weight: bold;
+                font-size: 1.1rem;
+		background: black;
+		color: white;
+                height: 45px;
+		width: 25%;
+                border-radius: 16px;
+                cursor: pointer;
+                    }    
+                    
+                              .but {
+		border-width:3px;
+		border-color: green;
+		border-style: solid;
+		text-align: center;
+		font-weight: bold;
+                font-size: 1.1rem;
+		background: black;
+		color: white;
+                height: 45px;
+		width: 25%;
+                border-radius: 16px;
+                cursor: pointer;
+                    }
+                
+                          .butt {
+		border-width:3px;
+		border-color: green;
+		border-style: solid;
+		text-align: center;
+		font-weight: bold;
+                font-size: 1.1rem;
+		background: black;
+		color: white;
+                height: 45px;
+		width: 25%;
+                border-radius: 16px;
+                cursor: pointer;
+                    }    
+                      .back {
+		border-width:3px;
+		border-color: green;
+		border-style: solid;
+		text-align: center;
+		font-weight: bold;
+                font-size: 1.1rem;
+		background: black;
+		color: white;
+                height: 45px;
+		width: 25%;
+                border-radius: 16px;
+                cursor: pointer;
+                    }    
+                    
+        </style>
+    </h:head>
+    
+   
+    <h:body style="background-color:white">
+        <h:form>
+        <div >
+            <p style="text-align: center; background-color: #52ff7f">THIRD PARTY INFORMATION</p></div>
+        <div>
+
+            <h:dataTable  value="#{staffList.getdisplayThirdParty()}"
+                          var="data" style=" border: 1px red;">   
+                
+                 <h:column>
+                    <f:facet name="header">ID</f:facet>
+                    <h:outputText value="#{table.rowIndex + 1}"/>
+                </h:column>
+
+                
+                 <h:column>
+                    <f:facet name="header">
+                        
+                       ID NUMBER
+                       
+                    </f:facet>
+                    #{data.idnumber}
+                    
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                       FIRST NAME 
+                    </f:facet>
+                    #{data.firstname}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header" class="text-center alert-warning">
+                      LAST NAME
+                    </f:facet>
+                    #{data.lastname}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                       EMAIL
+                    </f:facet>
+                    #{data.email}
+                </h:column>
+               
+                    <h:column>
+                    <f:facet name="header">
+                       PHONE NUMBER
+                        
+                    </f:facet>
+                    #{data.phonenumber}
+                </h:column>
+                 </h:dataTable>
+                                   </div>  
+             <h:commandButton value = "Back" action = "HomePage" immediate="true" styleClass= "back" ></h:commandButton>
+              
+           </h:form>
+             </h:body>                 
+      </html>            
+                 
+        
+        
+          
+   
+            
+           
+
+
+
+                  
+          
+            
+            
+          
+  
+                
+                
+        
+                    
+               
+          
