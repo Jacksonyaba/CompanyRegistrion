@@ -28,7 +28,7 @@
                         width: 100%;
                         max-width: 470px;
                         padding: 30px 20px;
-                        background: green;
+                        background: yellowgreen;
                         border: 2px solid blue;
                         border-radius: 16px;
                        
@@ -50,7 +50,7 @@
                      position: relative;
                      margin: 10px 0;
                      border-bottom: 2px solid blue;
-                     color: yellowgreen;
+                     color: red;
                      font-weight: bold;
                     }
                     .main input{
@@ -79,14 +79,7 @@
                      color: black;
                     } 
                                              
-                                          
-                                                
-                                        
-                            
-                            
-                           
-                         
-                   .button {
+                           .button {
 		        border-width:2px;
 		        border-color: green;
 		        border-style: solid;
@@ -114,68 +107,8 @@
 		width: 50%;
                 border-radius: 16px;
                 cursor: pointer;
-                    }
-                   
-                
-                          .bu {
-		border-width:3px;
-		border-color: green;
-		border-style: solid;
-		text-align: center;
-		font-weight: bold;
-                font-size: 1.1rem;
-		background: black;
-		color: white;
-                height: 45px;
-		width: 25%;
-                border-radius: 16px;
-                cursor: pointer;
-                    }    
-                        .b {
-		border-width:3px;
-		border-color: green;
-		border-style: solid;
-		text-align: center;
-		font-weight: bold;
-                font-size: 1.1rem;
-		background: black;
-		color: white;
-                height: 45px;
-		width: 25%;
-                border-radius: 16px;
-                cursor: pointer;
-                    }    
-                    
-                              .but {
-		border-width:3px;
-		border-color: green;
-		border-style: solid;
-		text-align: center;
-		font-weight: bold;
-                font-size: 1.1rem;
-		background: black;
-		color: white;
-                height: 45px;
-		width: 25%;
-                border-radius: 16px;
-                cursor: pointer;
-                    }
-                
-                          .butt {
-		border-width:3px;
-		border-color: green;
-		border-style: solid;
-		text-align: center;
-		font-weight: bold;
-                font-size: 1.1rem;
-		background: black;
-		color: white;
-                height: 45px;
-		width: 25%;
-                border-radius: 16px;
-                cursor: pointer;
-                    }    
-                         </style>
+                    }                  
+                                           </style>
                     
     </h:head>
     <h:body>
@@ -190,11 +123,11 @@
                        
                              <div class="details">
                         <h:outputLabel><span>CNAME</span>:</h:outputLabel>
-                    <h:inputText id="cname" value = "#{insertion.cname}" required = "true" ></h:inputText>
+                    <h:inputText id="cname" value = "#{delete.cname}" required = "true" ></h:inputText>
                     <h:message for="cname"></h:message>
                           
                     <h:outputLabel><span>FNAME</span>:</h:outputLabel>
-                         <h:inputText id = "fname" value = "#{insertion.fname}" required = "true" ></h:inputText>
+                         <h:inputText id = "fname" value = "#{delete.fname}" required = "true" ></h:inputText>
                     <h:message for="fname"></h:message> 
                     </div>
                     <br></br> 
@@ -202,34 +135,34 @@
                    
                         <div class="details"> 
                             <h:outputLabel><span>PHONE</span>:</h:outputLabel>
-                            <h:inputText id = "phone" value = "#{insertion.phone}" required = "true"></h:inputText>
+                            <h:inputText id = "phone" value = "#{delete.phone}" required = "true"></h:inputText>
                     <h:message for="phone"></h:message>
                      
                     <h:outputLabel><span> EMAIL</span>:</h:outputLabel>
-                    <h:inputText id = "email" value= "#{insertion.email}"  required = "true" ></h:inputText>
+                    <h:inputText id = "email" value= "#{delete.email}"  required = "true" ></h:inputText>
                     <h:message for="email"></h:message>
                       </div>
                     <br></br> 
                     
                     <div class="details">        
                                  <h:outputLabel><span>ADDRESS</span>:</h:outputLabel>
-                    <h:inputText id = "address" value = "#{insertion.address}"  required = "true" ></h:inputText>
+                    <h:inputText id = "address" value = "#{delete.address}"  required = "true" ></h:inputText>
                     <h:message for="address"></h:message>
                     
                   <h:outputLabel><span>CITY</span>:</h:outputLabel>
-                    <h:inputText id = "city" value = "#{insertion.city}" required = "true" ></h:inputText>
+                    <h:inputText id = "city" value = "#{delete.city}" required = "true" ></h:inputText>
                     <h:message for="city"></h:message>
                    </div>
                  <br></br> 
                       
                       <div class="details"> 
                     <h:outputLabel><span>NATIONALITY</span>:</h:outputLabel>
-                    <h:inputText id = "nationality" value= "#{insertion.nationality}" required= "true" ></h:inputText>
+                    <h:inputText id = "nationality" value= "#{delete.nationality}" required= "true" ></h:inputText>
                      <h:message for="nationality"></h:message>
                     
                              
                     <h:outputLabel><span>COMPANY TYPE</span>:</h:outputLabel>
-                    <h:inputText id = "companytype" value = "#{insertion.companytype}"  required = "true" ></h:inputText>
+                    <h:inputText id = "companytype" value = "#{delete.companytype}"  required = "true" ></h:inputText>
                     <h:message for="companytype"></h:message>
                        </div>
                      <br></br> 
@@ -238,66 +171,16 @@
                      
                       
                       
-                   <h:commandButton value = "Submit" action = "#{insertion.insert()}" styleClass= "button" ></h:commandButton>
-                     <h:commandButton value = "Back" action = "HomePage" immediate="true" styleClass= "back" ></h:commandButton>
+                   <h:commandButton value = "Delete" action = "#{delete.PerformDelete()}" styleClass= "button" ></h:commandButton>
+                     <h:commandButton value = "Back" action = "Registration" immediate="true" styleClass= "back" ></h:commandButton>
                      <br></br>
                              
-                                           
-                         <h:commandButton value= "VIEW" action = "Table" immediate= "true" styleClass = "b" ></h:commandButton> 
-                         <h:commandButton value= "DELETE" action = "Delete" immediate= "true" styleClass = "but" ></h:commandButton> 
-                         <h:commandButton value= "UPDATE" action = "Update" immediate= "true" styleClass = "butt" ></h:commandButton> 
-                                  
+                                 
+                        
                      </h:form>
                 </div>
         
             </h:body>
     
-       </html>
-              
-        
-                       
-                       
-                       
-                    
-                 
-                              
-       
-            
-	
-                                        
-                    
-                    
-                    
-                    
-                    
-                   
-                  
-                    
-                       
-                       
-                  
-                    
-                      
-                    
-               
-                 
-                                             
-		
-                          
-	
-                
-              
-                
-    
-                  
-                         
-                 
-                    
-                    
-                    
-             
-                  
-                     
-                  
-                        		
-  
+       </html>                        
+                                    
