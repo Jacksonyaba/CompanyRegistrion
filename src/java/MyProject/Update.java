@@ -4,6 +4,7 @@ package MyProject;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -86,20 +87,26 @@ public class Update {
         try {
            DBconnector obj =new DBconnector();
              Connection con = obj.connMethod();
-        PreparedStatement stmt= con.prepareStatement("Insert into REGISTER(CNAME,FNAME,PHONE,EMAIL,ADDRESS,CITY,NATIONALITY,COMPANYTYPE) "
-                         + "values (?,?,?,?,?,?,?)");     
-        stmt.setString(1,cname);  
-        stmt.setString(2,fname);  
-        stmt.setString(3,phone);  
-        stmt.setString(4,email); 
-        stmt.setString(5,address); 
-        stmt.setString(6,city); 
-        stmt.setString(7,nationality); 
-        stmt.setString(8,companytype); 
-        stmt.executeUpdate();  
-            System.out.println("Data Updated Successfully");
-        }
-        catch (SQLException e) {
-        }
+     
+     String edit= "update REGISTER set FNAME='"+fname+"',CNAME='"+cname+"',"
+                    + "PHONE='"+phone+"',EMAIL='"+email+"',ADDRESS='"+address+"',CITY='"+city+"',NATIONALITY='"+nationality+"'"
+             + " where COMPANYTYPE='"+companytype+"'";
+          Statement stmt=null;
+       stmt = con.createStatement();
+       stmt.executeQuery(edit);
+            
+                 System.err.println("success");
+    } catch (ClassNotFoundException | SQLException e) {
+        
     }
+       
+     
+    
 }
+}
+      
+
+         
+         
+            
+           

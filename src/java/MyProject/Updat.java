@@ -3,6 +3,7 @@ package MyProject;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -59,22 +60,21 @@ public class Updat {
         try {
            DBconnector obj =new DBconnector();
          Connection con = obj.connMethod();
-        PreparedStatement stmt= con.prepareStatement("Insert into THIRDPARTY(IDNUMBER,FIRSTNAME,LASTNAME,EMAIL,PHONENUMBER) "
-                              + "values (?,?,?,?,?)"); 
-         stmt.setString(1,idnumber); 
-         stmt.setString(2,firstname);  
-         stmt.setString(3,lastname);  
-         stmt.setString(4,email); 
-         stmt.setString(5,phonenumber); 
+       
+        String edit= "update THIRDPARTY set FIRSTNAME='"+firstname+"',LASTNAME='"+lastname+"',EMAIL='"+email+"',"
+         + "PHONENUMBER='"+phonenumber+"' where IDNUMBER='"+idnumber+"'";
+          Statement stmt = null;
+        stmt = con.createStatement();
+       stmt.executeQuery(edit);
+            
+          
+       
+            System.err.println("Data successfull");
+    } catch (ClassNotFoundException | SQLException e) {
         
-        
-        stmt.executeUpdate();  
-            System.out.println("Data UpDated Successfully");
-        }
-        catch (SQLException e) {
-        }
     }
-    
-}  
-        
 
+ 
+    
+}
+}
