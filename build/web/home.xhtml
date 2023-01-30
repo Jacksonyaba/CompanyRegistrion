@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <style >
+             body{
+                   background-color: green;
+                 background-position: center;
+                 color: white;
+             }
+             
+             .content{
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                text-align: center;
+                color: yellow;
+            }
+            .content h3{
+                font-size: 50px;
+                margin-top: 60px;
+            }
+            
+             .content h2{
+                font-size: 50px;
+                margin-top: 60px;
+            }
+            
+                         .button {
+		border-width:3px;
+		border-color: green;
+		border-style: solid;
+		text-align: center;
+		font-weight: bold;
+                font-size: 1.1rem;
+		background: black;
+		color: white;
+                height: 40px;
+		width: 25%;
+                border-radius: 14px;
+                cursor: pointer;
+                    }    
+             
+        </style>
+        
+    </h:head>
+    <h:body>
+        <h:form id="form">
+        <div class="content">
+        <h3>Welcome to Ethiopia</h3>
+        <h2>  Ethiopia  </h2>
+        Experience the diverse culture and the beautiful landscape of the region <br></br>
+         
+         Ethiopia is highly and most known for its high quality coffee production it produces.<br></br>
+        It is rich in culture and national parks.
+        
+        </div>
+        <br></br>
+        
+         <h:commandButton value="Back" action="HomePage" styleClass="button"></h:commandButton> 
+        </h:form> 
+    </h:body>
+</html>

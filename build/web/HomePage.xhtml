@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+    <h:head>
+        <title>from the sign in and create account pages</title> 
+        <style>
+        .baner{
+              width: 100%;
+              height: 100vh;
+            background-image:url("image/45.jpg");
+            background-size: cover;
+           background position: center;
+        }
+        .navbar{
+            width: 85%;
+            margin: auto;
+            padding: 20px 0;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            
+                   }
+            
+        .navbar ul li{
+            list-style-type: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+            
+            
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            color: green;
+            font-weight: bold;
+           text-transform: uppercase;
+        }
+        .navbar ul li::after{
+            content: '';
+            height: 3px;
+            width: 0%;
+            background: #009688;
+            position:abolute;
+            left:0;
+            bottom:-10px;
+            transition: o.5s;
+        }
+        .navbar ul li:hover::after{
+            width: 100%;
+        }
+           
+        .content{
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                transform:  translateY(-50%);
+                text-align: center;
+                color: red;
+                
+            }
+            .logo{
+                color: red;
+                
+            }
+                 
+        .bu {
+		border-width:3px;
+		border-color: green;
+		border-style: solid;
+		text-align: center;
+		font-weight: bold;
+                font-size: 1.1rem;
+		background: black;
+		color: white;
+                height: 45px;
+		width: 25%;
+                border-radius: 16px;
+                cursor: pointer;
+                    }      
+               
+             
+        </style>   
+    </h:head>
+    
+    <h:body>
+        
+        <h:form>
+        <div class="baner">
+            
+           
+              <div class="navbar">
+           
+            
+                 <h3 class="logo">COMPANY REGISTRATION:</h3>
+                 
+                   <ul>
+                <li><a href="home.xhtml"> Home</a></li>
+                
+                <li><a href="Registration.xhtml">Company Registration</a></li>
+                
+                <li><a href="thirdparty.xhtml"> Third Party Registration</a></li>
+                
+                <li><a href="about.xhtml">About Ethiopia Business</a></li>
+                
+                 </ul>
+             
+                   </div>
+             </div>              
+          </h:form>    
+        </h:body>
+    </html>          
+   
+              
+               
+       
+        
+  
+                 
+                
+              
+                 
+                     
+       
+   
+
+         
+                                                    
+     

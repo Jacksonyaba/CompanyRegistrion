@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>from the company registration option in the Homepage</title>
+        
+             <style type="text/css">
+                    *{
+                        padding: 0;
+                        margin: 0;
+                        box-sizing: border-box;
+                        font-family: 'Poppins', sans-serif;
+                    }     
+                                        body{
+                        display: flex;
+                        height: 105vh;
+                        width:100%;
+                        background-image:url("image/53.jpg");
+                        background-size: cover;
+                        background-position: center;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 10px;
+                                        }
+                                       .container{
+                        width: 100%;
+                        max-width: 470px;
+                        padding: 30px 20px;
+                        background: yellowgreen;
+                        border: 2px solid blue;
+                        border-radius: 16px;
+                       
+                    }
+                    .container h3{
+                        text-align: center;
+                        color: black;
+                        font-size: 2.5rem;
+                        font-weight: 600;
+                        padding: 0,0,8px,0;
+                    }
+                    
+                  
+                   
+                    container form{
+                     padding: 0 40px;
+                    }
+                    form .main{
+                     position: relative;
+                     margin: 10px 0;
+                     border-bottom: 2px solid blue;
+                     color: red;
+                     font-weight: bold;
+                    }
+                    .main input{
+                     width: 100%;
+                     padding: 0 5px;
+                     height: 40px;
+                     border: none;
+                     outline: none;
+                     color: green;
+                    }
+                    .main output label{
+                        position: absolute;
+                        top: 50px;
+                        left: 6px;
+                        color: red;
+                        transform: translateY(-50%);
+                        font-size: 1.1rem;
+                        pointer-events: none;
+                        transition: all 20s ease;
+                    }
+                   
+                    
+                    .main input:focus ~label,
+                    .main input:vallid ~label{
+                    top: -3px;
+                     color: black;
+                    } 
+                                             
+                           .button {
+		        border-width:2px;
+		        border-color: green;
+		        border-style: solid;
+		        text-align: center;
+		        font-weight: bold;
+                        font-size: 1.1rem;
+		        background: black;
+		        color: white;
+                        height: 45px;
+		        width: 50%;
+                        border-radius: 16px;
+                        cursor: pointer;
+                     }
+                    
+                    .back {
+		border-width:2px;
+		border-color: green;
+		border-style: solid;
+		text-align: center;
+		font-weight: bold;
+                font-size: 1.1rem;
+		background: black;
+		color: white;
+                height: 45px;
+		width: 50%;
+                border-radius: 16px;
+                cursor: pointer;
+                    }                  
+                                           </style>
+                    
+    </h:head>
+    <h:body>
+         <div class="container">
+             
+              <h3>Welcome please register your company</h3>
+		<h:form id = "formId">
+                    
+                       
+                    <div class="main">
+                        
+                       
+                             <div class="details">
+                        <h:outputLabel><span>CNAME</span>:</h:outputLabel>
+                    <h:inputText id="cname" value = "#{update.cname}" required = "true" ></h:inputText>
+                    <h:message for="cname"></h:message>
+                          
+                    <h:outputLabel><span>FNAME</span>:</h:outputLabel>
+                         <h:inputText id = "fname" value = "#{update.fname}" required = "true" ></h:inputText>
+                    <h:message for="fname"></h:message> 
+                    </div>
+                    <br></br> 
+                      
+                   
+                        <div class="details"> 
+                            <h:outputLabel><span>PHONE</span>:</h:outputLabel>
+                            <h:inputText id = "phone" value = "#{update.phone}" required = "true"></h:inputText>
+                    <h:message for="phone"></h:message>
+                     
+                    <h:outputLabel><span> EMAIL</span>:</h:outputLabel>
+                    <h:inputText id = "email" value= "#{update.email}"  required = "true" ></h:inputText>
+                    <h:message for="email"></h:message>
+                      </div>
+                    <br></br> 
+                    
+                    <div class="details">        
+                                 <h:outputLabel><span>ADDRESS</span>:</h:outputLabel>
+                    <h:inputText id = "address" value = "#{update.address}"  required = "true" ></h:inputText>
+                    <h:message for="address"></h:message>
+                    
+                  <h:outputLabel><span>CITY</span>:</h:outputLabel>
+                    <h:inputText id = "city" value = "#{update.city}" required = "true" ></h:inputText>
+                    <h:message for="city"></h:message>
+                   </div>
+                 <br></br> 
+                      
+                      <div class="details"> 
+                    <h:outputLabel><span>NATIONALITY</span>:</h:outputLabel>
+                    <h:inputText id = "nationality" value= "#{update.nationality}" required= "true" ></h:inputText>
+                     <h:message for="nationality"></h:message>
+                    
+                             
+                    <h:outputLabel><span>COMPANY TYPE</span>:</h:outputLabel>
+                    <h:inputText id = "companytype" value = "#{update.companytype}"  required = "true" ></h:inputText>
+                    <h:message for="companytype"></h:message>
+                       </div>
+                     <br></br> 
+                   </div> 
+                   
+                     
+                      
+                      
+                   <h:commandButton value = "Update" action = "#{update.PerformUpdate()}" styleClass= "button" ></h:commandButton>
+                     <h:commandButton value = "Back" action = "Registration" immediate="true" styleClass= "back" ></h:commandButton>
+                     <br></br>
+                             
+                                 
+                        
+                     </h:form>
+                </div>
+        
+            </h:body>
+    
+       </html>                        
+                                        
+                            
+                            
+                           
+                         
+                
+                   
+                
+             
+                        
+		
+      
+  

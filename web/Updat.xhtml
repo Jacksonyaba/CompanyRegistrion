@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>from the third party option in the HomePage</title>
+          <style type="text/css">
+                    *{
+                        padding: 0;
+                        margin: 0;
+                        box-sizing: border-box;
+                        font-family: 'Poppins', sans-serif;
+                    }   
+                    
+                
+                       body{
+                        height: 100vh;
+                        width:100%;
+                        background-image:url("image/122.jpg");
+                        background-size: cover;
+                        background-position: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding:0 5%; 
+                    }
+                    .container{
+                        width: 100%;
+                        max-width: 470px;
+                        padding: 30px 20px;
+                        background: green;
+                        border: 2px solid blue;
+                        border-radius: 16px;
+                       
+                    }
+                    .container h3{
+                        text-align: center;
+                        color:red;
+                        font-size: 2.5rem;
+                        font-weight: 600;
+                        padding: 0,0,8px,0;
+                    }
+                    
+                  
+                   
+                    container form{
+                     padding: 0 40px;
+                    }
+                    form .main{
+                     position: relative;
+                     margin: 10px 0;
+                     border-bottom: 2px solid blue;
+                     color: yellowgreen;
+                     font-weight: bold;
+                    }
+                    .main input{
+                     width: 100%;
+                     padding: 0 5px;
+                     height: 40px;
+                     border: none;
+                     outline: none;
+                     color: green;
+                    }
+                    .main output label{
+                        position: absolute;
+                        top: 50px;
+                        left: 6px;
+                        color: red;
+                        transform: translateY(-50%);
+                        font-size: 1.1rem;
+                        pointer-events: none;
+                        transition: all 20s ease;
+                    }
+                   
+                    
+                    .main input:focus ~label,
+                    .main input:vallid ~label{
+                    top: -3px;
+                     color: black;
+                    } 
+                 
+                          .button {
+		border-width:3px;
+		border-color: green;
+		border-style: solid;
+		text-align: center;
+		font-weight: bold;
+                font-size: 1.1rem;
+		background: black;
+		color: white;
+                height: 45px;
+		width: 50%;
+                border-radius: 16px;
+                cursor: pointer;
+                    }
+                       .back {
+		border-width:3px;
+		border-color: green;
+		border-style: solid;
+		text-align: center;
+		font-weight: bold;
+                font-size: 1.1rem;
+		background: black;
+		color: white;
+                height: 45px;
+		width: 50%;
+                border-radius: 16px;
+                cursor: pointer;
+                    }
+              
+        </style>
+             
+               </h:head>
+    <h:body>
+        <div class="container">
+               
+               <h3>Update</h3>
+               
+              
+		<h:form id="form">
+                   
+                    <div class="main">
+                        
+                          <div class="main">
+                       <h:outputLabel for="ID NUMBER">ID NUMBER:
+                                  </h:outputLabel>
+                    <h:inputText id="idnumber" value= "#{updat.idnumber}" required="true" size="30"></h:inputText>
+                   <h:message for="idnumber"></h:message>    
+                       </div>
+                      <br></br>
+                    
+                       <h:outputLabel for="FIRST NAME">FIRST NAME:
+                                  </h:outputLabel>
+                    <h:inputText id="firstname" value= "#{updat.firstname}" required="true" size="30"> </h:inputText>
+                    
+                                   <h:message for="fisrtname"></h:message>
+                    </div>
+                   <br></br>
+                     
+                       <div class="main">
+                       <h:outputLabel for="LAST NAME">LAST NAME:
+                                  </h:outputLabel>
+                    <h:inputText id="lastname" value= "#{updat.lastname}" required="true" size="30"></h:inputText>
+                    <h:message for="lastname"> </h:message>     
+                     </div>
+                      <br></br>
+                                 
+                      <div class="main">
+                       <h:outputLabel for="EMAIL">EMAIL:
+                                  </h:outputLabel>
+                    <h:inputText id="email" value= "#{updat.email}" required="true" size="30"></h:inputText>
+                                <h:message for="email"></h:message>  
+                       </div>
+                      <br></br>   
+                
+                    <div class="main">
+                      
+                       <h:outputLabel for="PHONE NUMBER">PHONE NUMBER:
+                                  </h:outputLabel>
+                    <h:inputText id="phonenumber" value= "#{updat.phonenumber}" required="true" size="30">  </h:inputText>
+                                    <h:message for="phonenumber"> </h:message>    
+                   </div>
+                      <br></br>
+                      
+                      <h:commandButton value="SAVE" action="#{updat.Updatee()}" styleClass="button"></h:commandButton> 
+                          <h:commandButton value="Back" action="thirdparty" immediate= "true" styleClass="back"></h:commandButton> 
+                        </h:form>
+             </div>              
+    </h:body>
+</html>
+                                                                                 
+              
+ 
+                        
+                               
+                       
+                     
+                         
+          
