@@ -89,9 +89,9 @@ public class Delete {
            DBconnector obj =new DBconnector();
              Connection con = obj.connMethod();
      
-     String delete= "delete REGISTER set FNAME='"+fname+"',CNAME='"+cname+"',"
+     String delete= "delete REGISTER set FNAME='"+fname+"',COMPANYTYPE='"+companytype+"',"
                     + "PHONE='"+phone+"',EMAIL='"+email+"',ADDRESS='"+address+"',CITY='"+city+"',NATIONALITY='"+nationality+"'"
-             + " where COMPANYTYPE='"+companytype+"'";
+             + " where CNAME='"+cname+"'";
           Statement stmt=null;
        stmt = con.createStatement();
        stmt.executeQuery(delete);

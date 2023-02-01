@@ -20,7 +20,7 @@
                 padding: 20px;
             } 
             
-                        .bu {
+                        .button{
 		border-width:3px;
 		border-color: green;
 		border-style: solid;
@@ -34,55 +34,12 @@
                 border-radius: 16px;
                 cursor: pointer;
                     }    
-                        .b {
-		border-width:3px;
-		border-color: green;
-		border-style: solid;
-		text-align: center;
-		font-weight: bold;
-                font-size: 1.1rem;
-		background: black;
-		color: white;
-                height: 45px;
-		width: 25%;
-                border-radius: 16px;
-                cursor: pointer;
-                    }    
-                    
-                              .but {
-		border-width:3px;
-		border-color: green;
-		border-style: solid;
-		text-align: center;
-		font-weight: bold;
-                font-size: 1.1rem;
-		background: black;
-		color: white;
-                height: 45px;
-		width: 25%;
-                border-radius: 16px;
-                cursor: pointer;
-                    }
-                
-                          .butt {
-		border-width:3px;
-		border-color: green;
-		border-style: solid;
-		text-align: center;
-		font-weight: bold;
-                font-size: 1.1rem;
-		background: black;
-		color: white;
-                height: 45px;
-		width: 25%;
-                border-radius: 16px;
-                cursor: pointer;
-                    }    
+             
             
         </style>
     </h:head>
     <h:body style="background-color:white">
-       
+        <h:form>
         <div >
             <p style="text-align: center; background-color: #52ff7f">COMPANY INFORMATION</p></div>
         <div>
@@ -153,7 +110,9 @@
                 
                 
                    </h:dataTable>
-             </div>                              
+             </div>       
+         <h:commandButton value="Back" action="Registration" immediate="true" styleClass="button"></h:commandButton> 
+        </h:form>
            </h:body>     
    </html>
 
